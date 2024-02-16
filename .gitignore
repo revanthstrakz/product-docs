@@ -1,0 +1,6 @@
+.vitepress/cache
+.vitepress/dist
+scratchpad
+*DS_Store
+node_modules
+pdf/build

@@ -1,0 +1,86 @@
+:root {
+    --vp-c-gray-1: #dddde3;
+    --vp-c-gray-2: #e4e4e9;
+    --vp-c-gray-3: #ebebef;
+    --vp-c-gray-soft: rgba(142, 150, 170, 0.14);
+  
+    --vp-c-indigo-1: #10718e;
+    --vp-c-indigo-2: #0d82a6;
+    --vp-c-indigo-3: #00a0d1;
+    --vp-c-indigo-soft: rgba(100, 108, 255, 0.14);
+  
+    --vp-c-purple-1: #514089;
+    --vp-c-purple-2: #7058bd;
+    --vp-c-purple-3: #9a7bff;
+    --vp-c-purple-soft: rgba(173, 144, 232, 0.14);
+  
+    --vp-c-green-1: #50745f;
+    --vp-c-green-2: #709881;
+    --vp-c-green-3: #afd8c1;
+    --vp-c-green-soft: rgba(169, 239, 216, 0.14);
+  
+    --vp-c-yellow-1: #836610;
+    --vp-c-yellow-2: #b28d1e;
+    --vp-c-yellow-3: #fecb33;
+    --vp-c-yellow-soft: rgba(234, 185, 37, 0.14);
+  
+    --vp-c-red-1: #b43f4e;
+    --vp-c-red-2: #e48a96;
+    --vp-c-red-3: #f7c7d7;
+    --vp-c-red-soft: rgba(244, 141, 158, 0.14);
+  
+    --vp-c-sponsor: #db2777;
+}
+  
+.dark {
+    --vp-c-gray-1: #515c67;
+    --vp-c-gray-2: #414853;
+    --vp-c-gray-3: #32363f;
+    --vp-c-gray-soft: rgba(101, 117, 133, 0.16);
+  
+    --vp-c-indigo-1: #00a0d1;
+    --vp-c-indigo-2: #0d82a6;
+    --vp-c-indigo-3: #10718e;
+    --vp-c-indigo-soft: rgba(100, 108, 255, 0.16);
+  
+    --vp-c-purple-2: #7058bd;
+    --vp-c-purple-1: #9a7bff;
+    --vp-c-purple-3: #514089;
+    --vp-c-purple-soft: rgba(173, 144, 232, 0.14);
+  
+    --vp-c-green-1: #afd8c1;
+    --vp-c-green-2: #709881;
+    --vp-c-green-3: #50745f;
+    --vp-c-green-soft: rgba(169, 239, 216, 0.14);
+  
+    --vp-c-yellow-1: #fecb33;
+    --vp-c-yellow-2: #b28d1e;
+    --vp-c-yellow-3: #836610;
+    --vp-c-yellow-soft: rgba(234, 185, 37, 0.14);
+  
+    --vp-c-red-1: #f7c7d7;
+    --vp-c-red-2: #e48a96;
+    --vp-c-red-3: #b43f4e;
+    --vp-c-red-soft: rgba(244, 141, 158, 0.14);
+}
+  
+
+:root {
+    --vp-c-brand-1: var(--vp-c-purple-1);
+    --vp-c-brand-2: var(--vp-c-purple-2);
+    --vp-c-brand-3: var(--vp-c-purple-3);
+    --vp-c-brand-soft: var(--vp-c-purple-soft);
+
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-purple-2), var(--vp-c-indigo-3));  
+}
+
+.dark {
+    --vp-c-brand-1: var(--vp-c-indigo-1);
+    --vp-c-brand-2: var(--vp-c-indigo-2);
+    --vp-c-brand-3: var(--vp-c-indigo-3);
+    --vp-c-brand-soft: var(--vp-c-indigo-soft);
+
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-indigo-2), var(--vp-c-purple-1));  
+}

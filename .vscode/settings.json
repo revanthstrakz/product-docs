@@ -1,0 +1,8 @@
+{
+    "typst-preview.fontPaths": [
+        "/usr/local/share/fonts",
+        "${workspaceFolder}/fonts"
+    ],
+    "typst-lsp.rootPath": "",
+    "typst-lsp.exportPdf": "never"
+}

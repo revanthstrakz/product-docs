@@ -6,10 +6,11 @@ folder=build/$name
 
 cp -r ../docs/get-box/* $folder/
 cp template/template.typ $folder/
-cp getbox.typ $folder/raw.typ
+cp getbox.typ $folder/final.typ
 
 cd $folder
 
-pandoc --file-scope *.md -t typst >> raw.typ
-
-typst c raw.typ $name.pdf
+pandoc --file-scope *.md -o raw.typ
+luajit ../../block-remover.lua raw.typ
+cat processed_raw.typ >> final.typ
+typst c final.typ $name.pdf && echo PDF successfully created in ${folder}!

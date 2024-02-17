@@ -1,78 +1,126 @@
-#let conf(
-    title: "",
-    authors: "",
-    body
+// This function sets our whole manual as its `body` and formats
+// it as a simple fiction book.
+#let manual(
+  // The manual title.
+  title: [Manual title],
+
+  // The author.
+  author: none,
+
+  // The paper size to use.
+  paper: none,
+
+  // Details about the book's publisher that are
+  // display on the second page.
+  publishing-info: none,
+
+  // The content.
+  body,
 ) = {
+  // Set the document's metadata.
+  set document(title: title, author: author)
 
-    set page(
-        paper: "a5",
-        margin: (x: 2cm, y: 2cm),
-    )
+  set page(
+      paper: paper,
+      margin: (x: 2cm, y: 2cm),
+  )
 
-    set heading(numbering: "1.1.1")
-    show heading: it => block[
-        #v(0.5em)
-        #it.body
-        #v(0.3em)
-    ]
+  set heading(numbering: "1.1.1")
 
-    set par(justify: true)
+  // Heading format
+  show heading: it => {
+    // Always start a H1 section on a new page
+    if it.level == 1 { pagebreak() }
+    v(0.5em)
+    it
+    v(0.3em)
+  }
 
-    set text(font: "Source Sans 3", size: 12pt)
+  set par(justify: true)
 
-    v(1fr)
-    align(right)[
-        #text(title, size: 30pt)
+  set text(font: "Source Sans 3", size: 12pt)
 
-        #text(authors, size: 15pt)
-    ]
-    v(1fr)
-    pagebreak()
+  // Link formatting. To do: highlight external links differently, provide
+  // section numbers for internal links, etc.
+  show link: it => {
+    set text(rgb("514089"))
+    highlight(fill: rgb("51408922"), it)
+  }
 
-    counter(page).update(0)
-        
-    outline(
-        title: "Table of Contents",
-        depth: 3,
-        indent: true,
-        fill: repeat[.]
-    )
+  // The first page.
+  page(align(center + horizon)[
+    #text(2em)[*#title*]
+    #v(2em, weak: true)
+    #text(1.6em, author)
+  ])
 
-    page(footer: [
-            #align(center)[#line(length: 100%, angle: 0deg)]
-            #set align(right)
-            #set text(8pt)
-            #counter(page).display(
-                "1 / 1",
-                both: true,
-            )
-        ],
-        body
-    )
+  // Display our info at the bottom of the second page.
+  if publishing-info != none {
+    align(center + bottom, text(0.8em, publishing-info))
+  }
+
+  // Start with a chapter outline.
+  outline(
+    title: [Table of Contents],
+    depth: 3,
+    indent: true,
+  )
+
+  // Configure page properties.
+  set page(
+    numbering: "1/1",
+
+    header: locate(loc => {
+      // Query all level 1 headings and determine the current page number.
+      let curr-page = counter(page).at(loc).first()
+      let sections = query(heading.where(level: 1), loc)
+
+      // Find if there's a level 1 heading starting on this page.
+      let is-section-start = sections.any(h => h.location().page() == curr-page);
+
+      // If a chapter starts on this page, only show the document title.
+      if (is-section-start) {
+        return smallcaps(title)
+      }
+
+      // Otherwise, find the last level 1 heading before this location, if any.
+      let last-section = query(selector(heading.where(level: 1)).before(loc), loc).last()
+
+      // Show title and that heading.
+      smallcaps(title) + h(1fr) + smallcaps(last-section.body)
+    }),
+  )
+  body
 }
 
 // Everything below is just to test
 
-#show: doc => conf(
-  title: "Get Box V1 - Instructions",
-  authors: "Jangala",
-  doc,
+#show: manual.with(
+  title: [Get Box V1 - User Guide],
+  author: "Jangala",
+  paper: "a5",
+  publishing-info: [
+    Jangala. \
+    4-6a Hookers Road \
+    London, E17 6DP
+
+    #link("https://janga.la/")
+  ],
 )
 
-#block[
 = Introducing Get Box
-<docs__get-box__1-introduction.md__introducing-get-box>
+<introduction.md__introducing-get-box>
 Jangala’s Get Box is designed to provide effective internet access for
 households and small groups. It’s designed to be easy to set up, provide
-solid performance, and make the most of available data #footnote[Here
+robust performance, and make the most of available data #footnote[Here
 is the footnote.];.
 
 #box(width: 100%, image("images/jangala-mission.svg"))
 
-] <docs__get-box__1-introduction.md>
-#block[
+
+
 = Package Contents
-<docs__get-box__2-package-contents.md__package-contents>
+<package-contents.md__package-contents>
 #figure(
 align(center)[#table(
   columns: 2,
@@ -87,10 +135,10 @@ align(center)[#table(
 )]
 )
 
-] <docs__get-box__2-package-contents.md>
-#block[
+
+
 = Key Features
-<docs__get-box__3-features.md__key-features>
+<features.md__key-features>
 - #strong[Easy to Use];: Get Box is designed with simplicity in mind,
   ensuring that users can get online quickly without technical
   expertise.
@@ -100,10 +148,10 @@ align(center)[#table(
 
 #box(width: 100%, image("images/get-box-features.svg"))
 
-] <docs__get-box__3-features.md>
-#block[
+
+
 = Setting up Get Box
-<docs__get-box__4-quick-setup.md__setting-up-get-box>
+<quick-setup.md__setting-up-get-box>
 + Insert a SIM card into Get Box and/or connect the Get Box to another
   source of internet using the provided Ethernet cable.
 + Connect the Get Box to a power source.
@@ -112,14 +160,14 @@ align(center)[#table(
 #box(width: 100%, image("images/installation-process.svg"))
 
 If you have issues setting up your Get Box please see the
-#link("6-troubleshooting.md#troubleshooting")[troubleshooting] section
+#link(<troubleshooting.md__troubleshooting>)[troubleshooting] section
 
-] <docs__get-box__4-quick-setup.md>
-#block[
+
+
 = Advanced Setup
-<docs__get-box__5-advanced-setup.md__advanced-setup>
+<advanced-setup.md__advanced-setup>
 == Accessing Get Box’s Control Centre
-<docs__get-box__5-advanced-setup.md__accessing-get-boxs-control-centre>
+<advanced-setup.md__accessing-get-boxs-control-centre>
 Get Box is a plug and play device. You can find information on the
 connection, signal strength and more by connecting to Get Box’s Wi-Fi
 network and typing the following address into your phone or laptop
@@ -138,15 +186,15 @@ This should take you to a screen like the one below
 ]
 
 == Custom Wi-Fi Name and Password
-<docs__get-box__5-advanced-setup.md__custom-wi-fi-name-and-password>
+<advanced-setup.md__custom-wi-fi-name-and-password>
 \[TBD\]
 
-] <docs__get-box__5-advanced-setup.md>
-#block[
+
+
 = Troubleshooting
-<docs__get-box__6-troubleshooting.md__troubleshooting>
+<troubleshooting.md__troubleshooting>
 == Common Issues
-<docs__get-box__6-troubleshooting.md__common-issues>
+<troubleshooting.md__common-issues>
 - #strong[Power Issues];: Ensure the Get Box is connected to a working
   power outlet.
 - #strong[Connectivity Issues];: If the lights on Get Box flash on and
@@ -155,10 +203,10 @@ This should take you to a screen like the one below
 
 #box(width: 100%, image("images/troubleshooting-tips.svg"))
 
-] <docs__get-box__6-troubleshooting.md>
-#block[
+
+
 = Technical Specifications
-<docs__get-box__7-technical-specifications.md__technical-specifications>
+<technical-specifications.md__technical-specifications>
 - #strong[Model];: Get Box v1
 - #strong[Network Compatibility];: LTE cat 4, up to 40 Mbps
 - #strong[Wi-Fi Capacity];: Supports up to 20 users
@@ -166,21 +214,17 @@ This should take you to a screen like the one below
 
 #box(width: 100%, image("images/technical-specifications.svg"))
 
-] <docs__get-box__7-technical-specifications.md>
-#block[
+
+
 = Appendix
-<docs__get-box__8-appendix.md__appendix>
+<appendix.md__appendix>
 == A: Firmware Updates
-<docs__get-box__8-appendix.md__a-firmware-updates>
+<appendix.md__a-firmware-updates>
 Keeping your Get Box updated ensures you have the latest features and
 security enhancements. Your firmware will update automatically.
 
 == B: Legal and Safety Information
-<docs__get-box__8-appendix.md__b-legal-and-safety-information>
+<appendix.md__b-legal-and-safety-information>
 The Get Box complies with all relevant safety and regulatory standards.
 
 #box(width: 100%, image("images/appendix-information.svg"))
-
-] <docs__get-box__8-appendix.md>
-#block[
-] <docs__get-box__index.md>

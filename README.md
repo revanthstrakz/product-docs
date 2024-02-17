@@ -32,11 +32,15 @@ Install Homebrew (an open source software manager) on your Mac by pasting the fo
    ```zsh
    brew install --cask visual-studio-code
    ```
+
+   Note: may take a few minutes to complete
    
-4. **Install Docker Desktop:**
+4. **Install Docker Desktop:** - may take a few minutes to complete
    ```zsh
    brew install --cask docker
    ```
+
+   Note: may take a few minutes to complete
 
 5. **Launch Docker Desktop:**
 
@@ -78,11 +82,15 @@ Ensure you are running Windows 11 or a fairly recently updated version of Window
    ```powershell
    winget install -e --id Microsoft.VisualStudioCode
    ```
+
+   Note: may take a few minutes to complete
    
-3. **Install Docker Desktop:**
+3. **Install Docker Desktop:** 
    ```powershell
    winget install -e --id Docker.DockerDesktop
    ```
+
+   Note: may take a few minutes to complete (will launch an external installer)
 
 4. **Launch Docker Desktop:**
 
@@ -104,7 +112,7 @@ Ensure you are running Windows 11 or a fairly recently updated version of Window
    docker --version
    ```
 
-   If all commands return version numbers, the installation was successful.
+   If all commands return version numbers, the installation was successful!
 
 ### Final Notes
 Ensure Docker Desktop is running before attempting to use VSCode devcontainers.

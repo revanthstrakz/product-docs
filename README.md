@@ -73,7 +73,7 @@ Note: may take a few minutes to download the needed tools and complete.
 Ensure you are running Windows 11 or a fairly recently updated version of Windows 10 (version 1709, build 16299).
 
 #### Steps to Install Git, VSCode and Docker Desktop
-1. **Open Powershell** - Press the Start button, type "Powershell", and press Enter to launch it. 
+1. **Open Command Prompt** - Press the Start button, type "Command Prompt", and click or press Enter to launch it. 
 
 2. **Install Git:**
    ```powershell
@@ -92,7 +92,7 @@ Ensure you are running Windows 11 or a fairly recently updated version of Window
    winget install -e --id Docker.DockerDesktop
    ```
 
-   Note: may take a few minutes to complete (will launch an external installer)
+   Note: may take a few minutes to complete (will launch an external installer, after which you'll also have to wait!)
 
 4. **Launch Docker Desktop:**
 
@@ -137,7 +137,7 @@ We should automate this whole process using GitHub actions. So that each commit 
 
 To test the website locally run `npm run docs:dev` from the docs folder.
 
-To build pdfs do `/bin/sh build-getbox-pdf.sh` from the pdf folder.
+To build pdfs do `sh build-getbox-pdf.sh` from the pdf folder.
 
 ## Fonts
 

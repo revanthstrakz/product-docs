@@ -1,49 +1,43 @@
 {
-  "hash": "de02dc4b",
-  "configHash": "efe233f6",
-  "lockfileHash": "15e692a7",
-  "browserHash": "8ef9f11a",
+  "hash": "dbf850ae",
+  "configHash": "664baa93",
+  "lockfileHash": "11ae3951",
+  "browserHash": "acce2529",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "2fce8f4e",
+      "fileHash": "278bbc19",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "bca01f57",
+      "fileHash": "171c5983",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "81b215c2",
+      "fileHash": "4dd55ab0",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "60e2aaf4",
+      "fileHash": "db092a9b",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "d04831a1",
+      "fileHash": "e886588e",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "dddfb140",
-      "needsInterop": false
-    },
-    "markdown-it": {
-      "src": "../../../../node_modules/markdown-it/index.mjs",
-      "file": "markdown-it.js",
-      "fileHash": "a83871a2",
+      "fileHash": "fdfb8e27",
       "needsInterop": false
     }
   },
@@ -53,9 +47,6 @@
     },
     "chunk-IMASPWRS": {
       "file": "chunk-IMASPWRS.js"
-    },
-    "chunk-CSAU5B4Q": {
-      "file": "chunk-CSAU5B4Q.js"
     }
   }
 }

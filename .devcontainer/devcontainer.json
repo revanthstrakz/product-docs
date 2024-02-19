@@ -13,7 +13,8 @@
 		  	"extensions": [
 				"nvarner.typst-lsp",
 				"mgt19937.typst-preview",
-				"Vue.volar"
+				"Vue.volar",
+				"tomoki1207.pdf"
 			]
 		}
 	}

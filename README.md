@@ -20,6 +20,8 @@ Install Homebrew (an open source software manager) on your Mac by pasting the fo
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
 
+Note: may take a few minutes to download the needed tools and complete.
+
 #### Steps to Install VSCode and Docker Desktop
 1. **Open the Terminal.**
 
@@ -35,7 +37,7 @@ Install Homebrew (an open source software manager) on your Mac by pasting the fo
 
    Note: may take a few minutes to complete
    
-4. **Install Docker Desktop:** - may take a few minutes to complete
+4. **Install Docker Desktop:**
    ```zsh
    brew install --cask docker
    ```

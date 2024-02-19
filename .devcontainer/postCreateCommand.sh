@@ -1,30 +1,26 @@
-#!/bin/sh
+#!/bin/bash
+
+# The script will exit on any error
+set -e
 
 sudo apt update -y
 
-sudo apt install -y apt-utils unzip curl wget git xz-utils
+sudo apt install -y apt-utils unzip curl wget xz-utils
 
 # Fonts
 
 sudo apt install -y fontconfig
-sudo mkdir /usr/local/share/fonts
 sudo cp fonts/*  /usr/local/share/fonts
 fc-cache -f
 
 # Install Node + VitePress bits
 
-cd ~
 curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
+rm nodesource_setup.sh
 sudo apt install -y nodejs
 
-npm add -D vitepress
-npm i vitepress-plugin-search flexsearch -D
-
-npm install markdown-it
-npm i -D vitepress-sidebar
-
-npm i
+npm install
 
 # Check architecture
 

@@ -5,7 +5,7 @@ set -e
 
 sudo apt update -y
 
-sudo apt install -y apt-utils unzip curl wget xz-utils
+sudo apt install -y apt-utils unzip curl wget xz-utils luajit
 
 # Fonts
 

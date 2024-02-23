@@ -48,23 +48,9 @@ Note: may take a few minutes to download the needed tools and complete.
 
    Find Docker in your Applications folder and double-click to launch it. This step is necessary to complete the installation and agree to the terms. _There's no need to create an account._
 
-6. **Verify Installation:**
+6. **Install Extensions for VSCode:**
 
-   Verify that VSCode and Docker Desktop are installed correctly by running the following three commands in Terminal:
-
-   ```zsh
-   git --version
-   ```
-
-   ```zsh
-   code --version
-   ```
-
-   ```zsh
-   docker --version
-   ```
-
-   If all three commands return version numbers, the installation was successful!
+   Click [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and press install - this will ask to open VS Code and will install the Devcontainers extension.
 
 ### For Windows 10/11 Users
 
@@ -80,41 +66,38 @@ Ensure you are running Windows 11 or a fairly recently updated version of Window
    winget install --id Git.Git -e --source winget
    ```
    
-2. **Install Visual Studio Code:**
+3. **Install Visual Studio Code:**
    ```powershell
    winget install -e --id Microsoft.VisualStudioCode
    ```
 
    Note: may take a few minutes to complete
-   
-3. **Install Docker Desktop:** 
+
+4. **Install WSL:** 
+   ```powershell
+   wsl --install
+   ```
+
+   WSL will take a few minutes to install. The installer will ask you for a username and password (use your Windows one if it's easy enough to remember). Once you get to a green prompt at which you can type, type `exit` and press return to get back to the terminal.
+
+5. **Install Docker Desktop:** 
    ```powershell
    winget install -e --id Docker.DockerDesktop
    ```
 
-   Note: may take a few minutes to complete (will launch an external installer, after which you'll also have to wait!)
+   Docker will take a few minutes to install. You will be asked to agree to a licence, and then a few minutes more.
 
-4. **Launch Docker Desktop:**
+6. **Launch Docker Desktop:**
 
-   Press the Start button, type "Docker Desktop", and press Enter to launch it. Follow the on-screen instructions to complete the setup. _There's no need to create an account._
+   Run Docker Desktop from your Start Menu. This step is necessary to complete the installation and agree to the terms. _There's no need to create an account._
 
-5. **Verify Installation:**
+7. **Setup VSCode:**
 
-   Verify that Git, VSCode and Docker Desktop are installed correctly by running:
+   Run Visual Studio Code from the Start Menu. Click on the little blue two arrows icon in the bottom left of the screen, and click `Connect to WSL` from the menu that appears.
 
-   ```powershell
-   git --version
-   ```
+   Click [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) and press install - this will ask to open VS Code and will install the WSL extension.
 
-   ```powershell
-   code --version
-   ```
-
-   ```powershell
-   docker --version
-   ```
-
-   If all commands return version numbers, the installation was successful!
+   Click [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and press install - this will ask to open VS Code and will install the Devcontainers extension.
 
 ### Final Notes
 Ensure Docker Desktop is running before attempting to use VSCode devcontainers.

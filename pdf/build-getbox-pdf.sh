@@ -13,4 +13,4 @@ cd $folder
 pandoc --file-scope *.md -o raw.typ
 luajit ../../block-remover.lua raw.typ
 cat processed_raw.typ >> final.typ
-typst c final.typ $name.pdf && echo PDF successfully created in ${folder}!
+typst c final.typ ../$name.pdf && echo PDF successfully created in ${folder}!

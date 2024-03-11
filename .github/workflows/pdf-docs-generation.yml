@@ -23,4 +23,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: PDF Files
-          path: pdf/*.pdf
+          path: pdf/build/*.pdf

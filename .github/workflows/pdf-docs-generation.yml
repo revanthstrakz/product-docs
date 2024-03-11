@@ -17,7 +17,7 @@ jobs:
         run: sh .devcontainer/postCreateCommand.sh
 
       - name: Build PDF
-        run: sh build-getbox-pdf.sh
+        run: cd pdf && sh build-getbox-pdf.sh
 
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v2

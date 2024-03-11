@@ -1,0 +1,26 @@
+name: PDF Docs Generation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Execute postCreateCommand.sh
+        run: sh .devcontainer/postCreateCommand.sh
+
+      - name: Build PDF
+        run: sh build-getbox-pdf.sh
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF Files
+          path: pdf/*.pdf

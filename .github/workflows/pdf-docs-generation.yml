@@ -2,8 +2,6 @@ name: PDF Docs Generation
 
 on:
   push:
-    branches:
-      - cicd
 
 jobs:
   build:

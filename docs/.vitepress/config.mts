@@ -85,5 +85,6 @@ export default defineConfig({
       text: 'Edit this page on GitHub'
     },  
   },
-  base:'/product-docs/'
+  base:'/product-docs/',
+  head: [['link', { rel: 'icon', href: '/favicon.png' }]]
 })

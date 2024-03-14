@@ -86,5 +86,5 @@ export default defineConfig({
     },  
   },
   base:'/product-docs/',
-  head: [['link', { rel: 'icon', href: '/favicon.png' }]]
+  head: [['link', { rel: 'icon', href: '/product-docs/favicon.png' }]]
 })

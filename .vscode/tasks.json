@@ -9,6 +9,13 @@
 			"detail": "vitepress dev docs"
 		},
 		{
+			"type": "npm",
+			"script": "docs:build",
+			"problemMatcher": [],
+			"label": "Build web docs",
+			"detail": "vitepress build docs"
+		},
+		{
 			"label": "Build PDF",
 			"type": "shell",
 			"command": "sh build-getbox-pdf.sh",

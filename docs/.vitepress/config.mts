@@ -84,5 +84,6 @@ export default defineConfig({
       pattern: 'https://github.com/jangala-dev/product-docs/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },  
-  }
+  },
+  base:'/product-docs/'
 })

@@ -19,7 +19,7 @@ Thank you for your interest in contributing to our product documentation! We wel
 
 ### Guidelines for Contributing
 
-![alt text](videos/contributing-video.mp4)
+<video src="/contributing-video.mp4" width="320" height="240" controls></video>
 
 1. **Open the GitHub repository**: Navigate to the [product-docs repository](https://github.com/jangala-dev/product-docs) on GitHub.
 ![alt text](images/github-code-tab.png)

@@ -5,21 +5,7 @@ author: Revanth Rao Thopucherla
 order: 1
 ---
 
-## Contributing to Product Documentation
-
-Thank you for your interest in contributing to our product documentation! We welcome contributions from everyone to help improve the quality and clarity of our docs. This document outlines the guidelines and processes for contributing.
-
-### Ways to Contribute
-
-1. **Report Issues**: If you find any errors, typos, or areas that need improvement, please [open an issue](https://github.com/jangala-dev/product-docs/issues) and describe the problem. We'll review your issue and address it as soon as possible.
-
-2. **Suggest Enhancements**: If you have ideas for new topics, examples, or improvements to existing content, feel free to [open an issue](https://github.com/jangala-dev/product-docs/issues) and describe your suggestions.
-
-3. **Submit Pull Requests**: If you'd like to contribute directly to the documentation, you can submit pull requests with your changes. Please follow the guidelines below.
-
-### Guidelines for Contributing
-
-<video src="/contributing-video.mp4" width="320" height="240" controls></video>
+# Creating a Pull Request
 
 1. **Open the GitHub repository**: Navigate to the [product-docs repository](https://github.com/jangala-dev/product-docs) on GitHub.
 ![alt text](images/github-code-tab.png)
@@ -38,6 +24,10 @@ Thank you for your interest in contributing to our product documentation! We wel
 10. **Describe your changes**: Provide a title and description for your pull request. Click `Create pull request` to submit it.
 11. **Review and merge**: Your pull request will be reviewed by the maintainers. Once approved, it will be merged into the main branch.
 12. **Delete your branch**: After your pull request is merged, you can delete your branch.
+
+## Video Walkthrough (Optional)
+
+<video src="/contributing-video.mp4"  height="240" controls></video>
 
 **Congratulations!**: You've successfully contributed to the product documentation.
 

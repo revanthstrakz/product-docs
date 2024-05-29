@@ -20,7 +20,7 @@ hero:
       link: /big-box/1-introduction
     - theme: alt
       text: Contribution Guide
-      link: /contribution-guide/1-introduction
+      link: /contribution-guide/1-overview
 
 features:
   - icon: 📖

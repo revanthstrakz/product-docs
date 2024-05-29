@@ -11,6 +11,6 @@ Thank you for your interest in contributing to our product documentation! We wel
 
 ## Ways to Contribute
 
-1. **Report/Suggest Enhancements**: If you find any errors, typos, or areas that need improvement or ideas for new topics, examples, or improvements to existing content, feel free to [open an issue](https://github.com/jangala-dev/product-docs/issues) and describe your suggestions/problem. We'll review your issue and address it as soon as possible.
+1. **Submit Pull Requests**: If you'd like to contribute directly to the documentation, you can submit pull requests with your changes.  
 
-2. **Submit Pull Requests**: If you'd like to contribute directly to the documentation, you can submit pull requests with your changes.  
+2. **Report/Suggest Enhancements**: If you find any errors, typos, or areas that need improvement or ideas for new topics, examples, or improvements to existing content, feel free to [open an issue](https://github.com/jangala-dev/product-docs/issues) and describe your suggestions/problem. We'll review your issue and address it as soon as possible.

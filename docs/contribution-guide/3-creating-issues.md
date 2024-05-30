@@ -43,6 +43,8 @@ GitHub Issues are a great way to track bugs, feature requests, and other tasks r
    - Once you've filled in all the necessary information, click the green "Submit new issue" button at the bottom of the page.
    ![alt text](images/github-issue-submit.png)
 
+## Conclusion
+
 Congratulations! You've successfully created a new issue in your GitHub repository. This issue will now be visible to your team members, and you can track its progress, assign it to specific individuals, and collaborate on resolving it.
 
 Remember, creating clear and detailed issues helps streamline the development process and ensures that important tasks are not overlooked.

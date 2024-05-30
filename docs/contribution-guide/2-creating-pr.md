@@ -3,7 +3,6 @@ date: 2024-05-10
 category: document
 author: Revanth Rao Thopucherla
 order: 2
-
 ---
 
 # Creating a Pull Request
@@ -30,6 +29,6 @@ order: 2
 
 <video src="/contributing-video.mp4"  height="240" controls></video>
 
-## End Credits
+## Conclusion
 
 Congratulations on successfully contributing to the product documentation! We appreciate your effort and look forward to more contributions from you. If you have any questions or need assistance, feel free to reach out to us. We welcome feedback on the contribution process and are open to suggestions for improvement. Happy contributing!
